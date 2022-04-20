@@ -12,23 +12,24 @@ struct ContentView: View {
         
       
            
-            ZStack(alignment: .center) {
+            ZStack(alignment: .leading) {
                 Color("purple")
                 
                 VStack {
+                    
                     
                     //   (alignment: .trailing, spacing: 3 )
                     
                     Text("Hello,\nI'm Wilo!")
                         .font(.system(size: 96, weight: .heavy, design: .monospaced))
                         .foregroundColor(.white)
-                        .padding(.trailing,150)
+                       .padding(.leading, 40)
                     
                     
                     Text("\nAnd I have just been created")
                         .font(.system(size: 96, design: .monospaced))
                         .foregroundColor(.white)
-                      //  .padding(.leading,80)
+                       .padding(.leading, 135)
                     
                     
                    // .alignmentGuide(VerticalAlignment.center) { _ in 20 }
@@ -36,10 +37,12 @@ struct ContentView: View {
                     NavigationLink(destination: OurMissionView()) {
                         Image("Arrow")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 300, height: 160, alignment: .trailing)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 500, height: 65, alignment: .center)
                             .foregroundColor(.white)
-                            .padding(.trailing, 340)
+                            .padding()
+                            
+                       
                                         
                     }
                     

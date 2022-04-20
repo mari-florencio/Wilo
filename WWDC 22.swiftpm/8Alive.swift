@@ -19,53 +19,46 @@ struct AliveView: View {
         
         GeometryReader { geo in
             
-        ZStack(alignment: .leading) {
-            Image("bg")
-                .resizable()
-                .scaledToFill()
-                .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
-            
-            VStack {
-              
-             //   (alignment: .trailing, spacing: 3 )
-
-                Text("Now I'm feeling it...")
-                    .font(.system(size: 100, weight: .regular, design: .monospaced))
-                    .foregroundColor(.black)
-                    .padding(.leading, 10)
+            ZStack {
+                Image("bg")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                 
-                
-                
-                Text("\nAnd I am..")
-                    .font(.system(size: 100, weight: .regular, design: .monospaced))
-                    .foregroundColor(.black)
-                    .padding(.trailing, 160)
-                
-                HStack {
-                
-                Text("ALIVE!")
-                    .font(.system(size: 170, weight: .heavy, design: .monospaced))
-                    .foregroundColor(.black)
-                   .padding(.leading, 70)
-                   .padding(.top, 60)
-                
+                VStack {
+                    
+                    Text("Now I'm feeling it...")
+                        .font(.system(size: 100, weight: .regular, design: .monospaced))
+                        .foregroundColor(.black)
+                        .frame(width: 700, height: 300, alignment: .leading)
+                    
+                    
+                    Text("And I am...")
+                        .font(.system(size: 100, weight: .regular, design: .monospaced))
+                        .foregroundColor(.black)
+                        .frame(width: 700, height: 200, alignment: .leading)
+                    
+                    
+                    Text("ALIVE!")
+                        .font(.system(size: 170, weight: .heavy, design: .monospaced))
+                        .foregroundColor(.black)
+                        .frame(width: 700, height: 300, alignment: .leading)
                     
                     NavigationLink(destination: ResultView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
-                    
+                        
                         Image("ArrowB")
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 230, height: 230, alignment: .trailing)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 300, height: 60, alignment: .leading)
+                            .padding(.trailing, 400)
+                            .padding(.top, 20)
+                        
+                        
                     }
-                    
-               //     .frame(width: 1, height: 20, alignment: .trailing)
-                  //  .padding(30)
-//                    .alignmentGuide(VerticalAlignment.center) { _ in 20 }
-                    
                 }
             }
         }
-        }
+        
         .edgesIgnoringSafeArea(.all)
         
     }

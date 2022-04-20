@@ -16,23 +16,28 @@ struct GreatChoiceView: View {
         
         ZStack(alignment: .center) {
             
-
+            
             Image(shape.getImageName())
-                 .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .foregroundColor(selectedColor)
-                    .frame(width: 700, height: 700, alignment: .center)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .foregroundColor(selectedColor)
+                .frame(width: 700, height: 700, alignment: .center)
             
             VStack {
                 
-                NavigationLink(destination: FeelingView(selectedColor: selectedColor, shape: shape)) {
-                    
-                Text("Great choise!")
-                    .font(.system(size: 320, weight: .heavy, design: .monospaced))
-                    .foregroundColor(.black)
-                    //.padding(60)
                 
-             
+                Text("Great choise!")
+                    .font(.system(size: 235, weight: .heavy, design: .monospaced))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.black)
+                    .frame(width: .infinity, height: 900, alignment: .center)
+                
+                NavigationLink(destination: FeelingView(selectedColor: selectedColor, shape: shape)) {
+                    Image("ArrowB")
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 300, height: 20, alignment: .center)
+                        .padding(10)
+                    
                 }
             }
             

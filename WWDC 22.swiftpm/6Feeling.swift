@@ -16,50 +16,49 @@ struct FeelingView: View {
     
     var body: some View {
         
-        ZStack(alignment: .trailing) {
+        ZStack {
             
             Color(.black)
             
             Image(shape.getImageName())
-                 .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 500, height: 500)
-                    .padding(90)
-        
-           
+            
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .foregroundColor(selectedColor)
+                .frame(width: 500, height: 500)
+                .padding(.leading, 350)
+            
             
             VStack {
-              
-             //   (alignment: .trailing, spacing: 3 )
-
+                
                 Text("But...I'm feeling a little empty")
-                    .font(.system(size: 90, weight: .regular, design: .monospaced))
+                    .font(.system(size: 80, weight: .regular, design: .monospaced))
                     .foregroundColor(.white)
-                    .padding(.leading, 90)
+                    .frame(width: 700, height: 300, alignment: .leading)
                 
                 
                 
-                Text("\nCan you give me some emotion?")
-                    .font(.system(size: 90, weight: .heavy, design: .monospaced))
+                Text("Can you give me some emotion?")
+                    .font(.system(size: 80, weight: .heavy, design: .monospaced))
                     .foregroundColor(.white)
-                    .padding(.leading, 30)
+                    .frame(width: 700, height: 450, alignment: .leading)
                 
-  
+                
                 NavigationLink(destination: EmotionsView(selectedColor: selectedColor, shape: shape))  {
-                Image("Arrow")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 20, height: 60, alignment: .trailing)
-                    .padding(.top, 90)
                     
-               //     .frame(width: 1, height: 20, alignment: .trailing)
-                  //  .padding(30)
-//                    .alignmentGuide(VerticalAlignment.center) { _ in 20 }
+                    Image("Arrow")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 300, height: 60, alignment: .leading)
+                        .padding(.trailing, 400)
+                        .padding(.top, 20)
+                    
                     
                 }
             }
             
         }
+        
         .edgesIgnoringSafeArea(.all)
         
     }

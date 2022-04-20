@@ -18,7 +18,8 @@ struct ThanksView: View {
         
         GeometryReader { geo in
             
-            ZStack(alignment: .leading) {
+            ZStack(alignment: .center) {
+                
                 Image("bg")
                     .resizable()
                     .scaledToFill()
@@ -27,14 +28,15 @@ struct ThanksView: View {
                 VStack {
                     
                     Text("Thanks for playing!")
-                        .font(.system(size: 160, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 150, weight: .heavy, design: .monospaced))
                         .foregroundColor(.black)
-                        .padding(.leading, 70)
-                        .padding(.top, 500)
+                        .frame(width: 750, height: 800, alignment: .leading)
+                    
                    
                     
                 }
             }
+            
             .edgesIgnoringSafeArea(.all)
             
         }

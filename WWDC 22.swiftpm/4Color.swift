@@ -13,50 +13,44 @@ struct ColorsView: View {
     
     var body: some View {
         
-
-        
         ZStack {
+            
             Color(.white)
             
             VStack {
                 
-        
+                
                 Text("Help me\nchoose a\ncolor")
                     .font(.system(size: 70, weight: .heavy, design: .monospaced))
                     .foregroundColor(.black)
-                  
-                    .frame(width: 800, height: 400, alignment: .leading)
-                    .padding(.top)
-             
+                
+                    .frame(width: 750, height: 280, alignment: .leading)
+                
                 
                 VStack {
                     
                     
                     Image(shape.getImageName())
-                       // .strokeBorder(Color.black, lineWidth: 8)
-                    //  .resizable()
-                    //    .background(selectedColor)
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 400, height: 400, alignment: .center)
                         .foregroundColor(selectedColor)
-                        .padding(60)
-                        
-                  // AQUI TA O COLOR PICKER!!
+                        .padding(50)
+                    
+                    // AQUI TA O COLOR PICKER!!
                     
                     ColorPicker("Choose the amazing color", selection: $selectedColor, supportsOpacity: false)
-                        .font(.system(size: 40, weight: .regular, design: .monospaced))
-                        .padding(60)
-                  
-                    NavigationLink(destination: GreatChoiceView(selectedColor: selectedColor, shape: shape)) {
+                        .font(.system(size: 30, weight: .regular, design: .monospaced))
+                        .frame(width: 750, height: 100, alignment: .leading)
                     
-                        Image("ArrowB")
-                        //  .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 900, height: 20, alignment: .trailing)
-                            .padding(40)
-                    }
+                    NavigationLink(destination: GreatChoiceView(selectedColor: selectedColor, shape: shape)) {
                         
-               
+                        Image("ArrowB")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 800, height: 40, alignment: .center)
+                           .padding(.top, 50)
+                    }
+                    
                 }
             }
             

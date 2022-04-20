@@ -25,32 +25,33 @@ struct TryAgainView: View {
              .resizable()
                 .aspectRatio(contentMode: .fill)
                 .foregroundColor(selectedColor)
-                .frame(width: 400, height: 400, alignment: .center)
-                .padding(.top, 600)
+                .frame(width: 500, height: 600, alignment: .center)
+                .padding(.top, 400)
             
             
             Image(emotion.getImageName())
             .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 100, height: 100)
-                .padding(.top, 600)
+                .frame(width: 150, height: 150)
+                .padding(.top, 300)
             
             VStack {
               
-             //   (alignment: .trailing, spacing: 3 )
 
-                Text("Thank you for helping me on this journey! \nNow we see that programming can bring amazing things to life!")
+                Text("Thank you for helping me on this journey! Now we see that programming can bring amazing things to life!")
                 
-                    .font(.system(size: 60, weight: .regular, design: .monospaced))
+                    .font(.system(size: 45, weight: .regular, design: .monospaced))
                     .foregroundColor(.white)
-                    .padding(.all, 40)
+                    .frame(width: 750, height: 350, alignment: .leading)
+                  //  .padding(.bottom, 100)
                 
                 
                 
                 Text("Want to try again?")
-                    .font(.system(size: 60, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 50, weight: .heavy, design: .monospaced))
                     .foregroundColor(.white)
-                    .padding(.trailing, 250)
+                    .frame(width: 750, height: 100, alignment: .leading)
+                    .padding(.bottom, 330)
                 
                
                 
@@ -61,28 +62,27 @@ struct TryAgainView: View {
                 Text("YES")
                         .font(.system(size: 80, weight: .heavy, design: .monospaced))
                     .foregroundColor(.green)
-                    .padding(.trailing, 40)
+                    .frame(width: 200, height: 100, alignment: .center)
+                    .padding(.leading, 90)
+                        
                     }
-                    Spacer()
+                    
+                        Spacer()
                     
                     NavigationLink(destination: ThanksView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
                 Text("NO")
                     .font(.system(size: 80, weight: .heavy, design: .monospaced))
                     .foregroundColor(.yellow)
-                    .padding(.trailing, 40)
+                    .frame(width: 200, height: 100, alignment: .center)
+                    .padding(.trailing, 90)
+                        
                     }
                 }
-                .padding(90)
-  
-                    
-               //     .frame(width: 1, height: 20, alignment: .trailing)
-                  //  .padding(30)
-//                    .alignmentGuide(VerticalAlignment.center) { _ in 20 }
-                    
                 
             }
             
         }
+        
         .edgesIgnoringSafeArea(.all)
         
     }

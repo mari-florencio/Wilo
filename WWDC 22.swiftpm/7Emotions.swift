@@ -15,24 +15,27 @@ struct EmotionsView: View {
     var body: some View {
         
         ZStack(alignment: .center) {
+            
             Color("amarelo")
             
             VStack {
                 
                 HStack {
+                    
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .sad)) {
-                    Image("sad")
-                    //  .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 400, alignment: .center)
+                        
+                        Image("sad")
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 300, height: 300, alignment: .center)
                     }
                     
                     VStack {
+                        
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .apx)) {
-                        Image("apx")
-                        //  .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 400, height: 400, alignment: .center)
+                            
+                            Image("apx")
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 300, height: 300, alignment: .center)
                         }
                         
                     }
@@ -42,21 +45,20 @@ struct EmotionsView: View {
                 HStack {
                     
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .doido)) {
-                    Image("doido")
-                    //  .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 400)
-                    //                    .alignmentGuide(VerticalAlignment.center) { _ in 20 }
+                        
+                        Image("doido")
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 300, height: 300)
                         
                     }
                     
                     VStack {
                         
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .ok)) {
-                        Image("ok")
-                        //  .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 400, height: 400, alignment: .center)
+                            
+                            Image("ok")
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 400, height: 400, alignment: .center)
                         }
                     }
                 }
@@ -64,21 +66,20 @@ struct EmotionsView: View {
                 HStack {
                     
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .lingua)) {
-                    Image("lingua")
-                    //  .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 400)
-                    //                    .alignmentGuide(VerticalAlignment.center) { _ in 20 }
+                        
+                        Image("lingua")
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 400, height: 400)
                         
                     }
                     
                     VStack {
                         
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .noiz)) {
-                        Image("noiz")
-                        //  .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 400, height: 400, alignment: .center)
+                            
+                            Image("noiz")
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 400, height: 400, alignment: .center)
                             
                         }
                         
@@ -86,7 +87,6 @@ struct EmotionsView: View {
                 }
             }
         }
-        
         
         .edgesIgnoringSafeArea(.all)
         

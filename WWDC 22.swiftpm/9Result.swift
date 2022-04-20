@@ -20,11 +20,14 @@ struct ResultView: View {
         
         GeometryReader { geo in
             
-            ZStack(alignment: .center) {
-                Image("bgg")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
+            ZStack {
+                
+                Color(.black)
+                
+//                Image("bgg")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
                 
                 
                 
@@ -35,22 +38,24 @@ struct ResultView: View {
                      .resizable()
                         .aspectRatio(contentMode: .fill)
                         .foregroundColor(selectedColor)
-                        .frame(width: 600, height: 600, alignment: .center)
+                        .frame(width: 600, height: 700, alignment: .center)
                     
                     
                     
                     Image(emotion.getImageName())
-                    //  .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 400)
-                        .padding(.bottom,150)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250, height: 250)
+                        .padding(.bottom, 150)
+
                     
                     NavigationLink(destination: TryAgainView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
                     
+                        
                         Image("Arrow")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 230, height: 230, alignment: .trailing)
+                            .frame(width: 700, height: 25, alignment: .center)
                             .padding(.top, 1000)
                     }
                     
