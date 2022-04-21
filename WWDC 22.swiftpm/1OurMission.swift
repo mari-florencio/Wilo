@@ -15,19 +15,19 @@ struct OurMissionView: View {
             
             Color(.black)
             
-            VStack (alignment: .center) {
+            VStack {
                 
                 
                 Text("Our mission here is to help me come alive through programming.")
-                    .font(.system(size: 70, weight: .regular, design: .monospaced))
+                    .font(.system(size: 40, weight: .regular, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 750, height: 450, alignment: .leading)
+                    .frame(width: 300, height: 350, alignment: .leading)
                 
                 
-                Text("\nCan you help me?")
-                    .font(.system(size: 70, weight: .heavy, design: .monospaced))
+                Text("Can you help me?")
+                    .font(.system(size: 40, weight: .heavy, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 750, height: 200, alignment: .leading)
+                    .frame(width: 300, height: 120, alignment: .leading)
                 
                 HStack {
 
@@ -35,21 +35,21 @@ struct OurMissionView: View {
                         
                         
                         Text("LET'S GO!")
-                            .font(.system(size: 70, weight: .heavy, design: .monospaced))
+                            .font(.system(size: 35, weight: .heavy, design: .monospaced))
                             .foregroundColor(.yellow)
-                            .padding(.trailing, 120)
+                           .padding(.trailing, 5)
                         
                         
                         Image("ArrowY")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 230, height: 200, alignment: .trailing)
+                            .frame(width: 95, height: 70, alignment: .leading)
                         
                     }
                     
                 }
             }
-            .padding(60)
+            
         }
         .edgesIgnoringSafeArea(.all)
         

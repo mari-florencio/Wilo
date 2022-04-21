@@ -18,7 +18,7 @@ struct ResultView: View {
     var body: some View {
         
         
-        GeometryReader { geo in
+        //GeometryReader { geo in
             
             ZStack {
                 
@@ -36,17 +36,17 @@ struct ResultView: View {
                     
                     Image(shape.getImageName())
                      .resizable()
-                        .aspectRatio(contentMode: .fill)
+                        .aspectRatio(contentMode: .fit)
                         .foregroundColor(selectedColor)
-                        .frame(width: 600, height: 700, alignment: .center)
+                        .frame(width: 350, height: 700, alignment: .center)
                     
                     
                     
                     Image(emotion.getImageName())
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 250, height: 250)
-                        .padding(.bottom, 150)
+                        .frame(width: 150, height: 150)
+                      //  .padding(.bottom, 150)
 
                     
                     NavigationLink(destination: TryAgainView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
@@ -55,17 +55,18 @@ struct ResultView: View {
                         Image("Arrow")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 700, height: 25, alignment: .center)
-                            .padding(.top, 1000)
+                            .frame(width: 300, height: 15, alignment: .center)
+                          .padding(.top, 700)
                     }
                     
                     
-                }
+              //  }
                 
             }
-            .edgesIgnoringSafeArea(.all)
+                
             
         }
+            .edgesIgnoringSafeArea(.all)
         
     }
     

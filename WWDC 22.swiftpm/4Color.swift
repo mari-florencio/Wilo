@@ -21,34 +21,42 @@ struct ColorsView: View {
                 
                 
                 Text("Help me\nchoose a\ncolor")
-                    .font(.system(size: 70, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 30, weight: .heavy, design: .monospaced))
                     .foregroundColor(.black)
-                
-                    .frame(width: 750, height: 280, alignment: .leading)
-                
+                    .frame(width: 300, height: 120, alignment: .leading)
+                    .padding(.bottom, 20)
+
                 
                 VStack {
                     
                     
                     Image(shape.getImageName())
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 400, alignment: .center)
+                        .frame(width: 300, height: 350, alignment: .center)
                         .foregroundColor(selectedColor)
-                        .padding(50)
+                 
                     
                     // AQUI TA O COLOR PICKER!!
                     
                     ColorPicker("Choose the amazing color", selection: $selectedColor, supportsOpacity: false)
-                        .font(.system(size: 30, weight: .regular, design: .monospaced))
-                        .frame(width: 750, height: 100, alignment: .leading)
+                        .font(.system(size: 20, weight: .regular, design: .monospaced))
+                        .frame(width: 300, height: 110, alignment: .leading)
+                        .padding(.top, 50)
                     
                     NavigationLink(destination: GreatChoiceView(selectedColor: selectedColor, shape: shape)) {
                         
-                        Image("ArrowB")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 800, height: 40, alignment: .center)
-                           .padding(.top, 50)
+                        Text("Continue ->")
+                            .font(.system(size: 15, weight: .medium, design: .monospaced))
+                            .foregroundColor(.green)
+                            .frame(width: 300, height: 20, alignment: .center)
+                           // .padding(.bottom, 20)
+                        
+                        
+//                        Image("ArrowB")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 300, height: 20, alignment: .center)
+//                           .padding(.top, 10)
                     }
                     
                 }

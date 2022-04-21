@@ -28,29 +28,31 @@ struct AliveView: View {
                 VStack {
                     
                     Text("Now I'm feeling it...")
-                        .font(.system(size: 100, weight: .regular, design: .monospaced))
+                        .font(.system(size: 35, weight: .regular, design: .monospaced))
                         .foregroundColor(.black)
-                        .frame(width: 700, height: 300, alignment: .leading)
+                        .frame(width: 300, height: 100, alignment: .leading)
+                    
                     
                     
                     Text("And I am...")
-                        .font(.system(size: 100, weight: .regular, design: .monospaced))
+                        .font(.system(size: 35, weight: .regular, design: .monospaced))
                         .foregroundColor(.black)
-                        .frame(width: 700, height: 200, alignment: .leading)
+                        .frame(width: 300, height: 50, alignment: .leading)
+                    
                     
                     
                     Text("ALIVE!")
-                        .font(.system(size: 170, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 70, weight: .heavy, design: .monospaced))
                         .foregroundColor(.black)
-                        .frame(width: 700, height: 300, alignment: .leading)
+                        .frame(width: 300, height: 140, alignment: .leading)
+                    
                     
                     NavigationLink(destination: ResultView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
                         
                         Image("ArrowB")
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 300, height: 60, alignment: .leading)
-                            .padding(.trailing, 400)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 300, height: 40, alignment: .leading)
                             .padding(.top, 20)
                         
                         

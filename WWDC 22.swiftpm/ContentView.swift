@@ -12,35 +12,31 @@ struct ContentView: View {
         
       
            
-            ZStack(alignment: .leading) {
+            ZStack  {
                 Color("purple")
                 
                 VStack {
                     
                     
-                    //   (alignment: .trailing, spacing: 3 )
-                    
                     Text("Hello,\nI'm Wilo!")
-                        .font(.system(size: 96, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 40, weight: .heavy, design: .monospaced))
                         .foregroundColor(.white)
-                       .padding(.leading, 40)
+                        .frame(width: 300, height: 100, alignment: .leading)
                     
                     
                     Text("\nAnd I have just been created")
-                        .font(.system(size: 96, design: .monospaced))
+                        .font(.system(size: 40, design: .monospaced))
                         .foregroundColor(.white)
-                       .padding(.leading, 135)
-                    
-                    
-                   // .alignmentGuide(VerticalAlignment.center) { _ in 20 }
+                        .frame(width: 300, height: 200, alignment: .leading)
                     
                     NavigationLink(destination: OurMissionView()) {
                         Image("Arrow")
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 500, height: 65, alignment: .center)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 300, height: 60, alignment: .leading)
                             .foregroundColor(.white)
-                            .padding()
+                            .padding(.top, 50)
+                            
                             
                        
                                         

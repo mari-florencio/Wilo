@@ -28,19 +28,19 @@ struct ThanksView: View {
                 VStack {
                     
                     Text("Thanks for playing!")
-                        .font(.system(size: 150, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 60, weight: .heavy, design: .monospaced))
                         .foregroundColor(.black)
-                        .frame(width: 750, height: 800, alignment: .leading)
+                        .frame(width: 300, height: 500, alignment: .leading)
                     
-                   
+                    
                     
                 }
             }
             
-            .edgesIgnoringSafeArea(.all)
+            
             
         }
-        
+        .edgesIgnoringSafeArea(.all)
     }
     
     struct ThanksView_Previews: PreviewProvider {

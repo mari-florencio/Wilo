@@ -17,18 +17,21 @@ struct ShapesView: View {
             VStack {
                 
                 
-                Text("Choose my shape")
-                    .font(.system(size: 70, weight: .heavy, design: .monospaced))
+                Text("Choose\nmy shape")
+                    .font(.system(size: 40, weight: .heavy, design: .monospaced))
+                    .multilineTextAlignment(.center)
                     .foregroundColor(.black)
-                    .padding(.bottom, 60)
+                    .frame(width: 300, height: 120, alignment: .center)
+                    .padding(.bottom, 40)
                 
                 
                 VStack {
                     
                     NavigationLink(destination: BodyView(shape: .star)) {
                         Image("Star")
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 400, height: 400, alignment: .center)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 200, height: 150, alignment: .center)
                             .foregroundColor(.secondary)
                         
                     }
@@ -37,16 +40,18 @@ struct ShapesView: View {
                         
                         NavigationLink(destination: BodyView(shape: .circle)) {
                             Image("Circle")
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 400, height: 400, alignment: .center)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150, alignment: .center)
                                 .foregroundColor(.secondary)
                             
                         }
                         
                         NavigationLink(destination: BodyView(shape: .amoeba)) {
                             Image("Amoeba")
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 400, height: 400)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 200, height: 250)
                                 .foregroundColor(.secondary)
                         }
                         

@@ -21,22 +21,24 @@ struct GreatChoiceView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .foregroundColor(selectedColor)
-                .frame(width: 700, height: 700, alignment: .center)
+                .frame(width: 380, height: 600, alignment: .center)
             
             VStack {
                 
                 
                 Text("Great choise!")
-                    .font(.system(size: 235, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 100, weight: .heavy, design: .monospaced))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
-                    .frame(width: .infinity, height: 900, alignment: .center)
+                    .frame(width: 320, height: 650, alignment: .center)
                 
                 NavigationLink(destination: FeelingView(selectedColor: selectedColor, shape: shape)) {
+                    
                     Image("ArrowB")
-                        .aspectRatio(contentMode: .fill)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 300, height: 20, alignment: .center)
-                        .padding(10)
+                        .padding(.top, 30)
                     
                 }
             }

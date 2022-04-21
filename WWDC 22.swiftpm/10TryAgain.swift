@@ -33,25 +33,24 @@ struct TryAgainView: View {
             .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 150)
-                .padding(.top, 300)
+                .padding(.top, 260)
             
             VStack {
               
 
                 Text("Thank you for helping me on this journey! Now we see that programming can bring amazing things to life!")
                 
-                    .font(.system(size: 45, weight: .regular, design: .monospaced))
+                    .font(.system(size: 25, weight: .regular, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 750, height: 350, alignment: .leading)
-                  //  .padding(.bottom, 100)
+                    .frame(width: 300, height: 180, alignment: .leading)    //.padding(.bottom, 30)
                 
                 
                 
                 Text("Want to try again?")
-                    .font(.system(size: 50, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 30, weight: .heavy, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 750, height: 100, alignment: .leading)
-                    .padding(.bottom, 330)
+                    .frame(width: 300, height: 120, alignment: .leading)
+                  .padding(.bottom, 200)
                 
                
                 
@@ -60,10 +59,10 @@ struct TryAgainView: View {
                     NavigationLink(destination: ContentView()) {
                         
                 Text("YES")
-                        .font(.system(size: 80, weight: .heavy, design: .monospaced))
+                        .font(.system(size: 35, weight: .heavy, design: .monospaced))
                     .foregroundColor(.green)
-                    .frame(width: 200, height: 100, alignment: .center)
-                    .padding(.leading, 90)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .padding(.leading, 70)
                         
                     }
                     
@@ -71,10 +70,10 @@ struct TryAgainView: View {
                     
                     NavigationLink(destination: ThanksView(selectedColor: selectedColor, shape: shape, emotion: emotion)) {
                 Text("NO")
-                    .font(.system(size: 80, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 35, weight: .heavy, design: .monospaced))
                     .foregroundColor(.yellow)
-                    .frame(width: 200, height: 100, alignment: .center)
-                    .padding(.trailing, 90)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .padding(.trailing, 70)
                         
                     }
                 }

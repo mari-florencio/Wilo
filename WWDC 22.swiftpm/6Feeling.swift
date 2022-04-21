@@ -25,33 +25,34 @@ struct FeelingView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .foregroundColor(selectedColor)
-                .frame(width: 500, height: 500)
-                .padding(.leading, 350)
+                .frame(width: 300, height: 700)
+                .padding(.leading, 200)
             
             
             VStack {
                 
                 Text("But...I'm feeling a little empty")
-                    .font(.system(size: 80, weight: .regular, design: .monospaced))
+                    .font(.system(size: 30, weight: .regular, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 700, height: 300, alignment: .leading)
+                    .frame(width: 300, height: 120, alignment: .leading)
                 
                 
                 
                 Text("Can you give me some emotion?")
-                    .font(.system(size: 80, weight: .heavy, design: .monospaced))
+                    .font(.system(size: 30, weight: .heavy, design: .monospaced))
                     .foregroundColor(.white)
-                    .frame(width: 700, height: 450, alignment: .leading)
+                    .frame(width: 300, height: 120, alignment: .leading)
+                
                 
                 
                 NavigationLink(destination: EmotionsView(selectedColor: selectedColor, shape: shape))  {
                     
                     Image("Arrow")
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 300, height: 60, alignment: .leading)
-                        .padding(.trailing, 400)
-                        .padding(.top, 20)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 30, alignment: .leading)
+                        .padding(.top, 50)
+                      
                     
                     
                 }

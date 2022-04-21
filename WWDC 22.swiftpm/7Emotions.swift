@@ -25,8 +25,10 @@ struct EmotionsView: View {
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .sad)) {
                         
                         Image("sad")
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 300, height: 300, alignment: .center)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .padding()
                     }
                     
                     VStack {
@@ -34,8 +36,10 @@ struct EmotionsView: View {
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .apx)) {
                             
                             Image("apx")
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 300, height: 300, alignment: .center)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .padding()
                         }
                         
                     }
@@ -47,8 +51,10 @@ struct EmotionsView: View {
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .doido)) {
                         
                         Image("doido")
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 300, height: 300)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 150)
+                            .padding()
                         
                     }
                     
@@ -57,8 +63,10 @@ struct EmotionsView: View {
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .ok)) {
                             
                             Image("ok")
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 400, height: 400, alignment: .center)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .padding()
                         }
                     }
                 }
@@ -68,8 +76,10 @@ struct EmotionsView: View {
                     NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .lingua)) {
                         
                         Image("lingua")
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 400, height: 400)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 150)
+                            .padding()
                         
                     }
                     
@@ -78,8 +88,10 @@ struct EmotionsView: View {
                         NavigationLink(destination: AliveView(selectedColor: selectedColor, shape: shape, emotion: .noiz)) {
                             
                             Image("noiz")
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 400, height: 400, alignment: .center)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .padding()
                             
                         }
                         
